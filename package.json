@@ -1,7 +1,7 @@
 {
-  "name": "my-ts-lib",
-  "version": "0.0.0",
-  "description": "My awesome typescript library",
+  "name": "usermatters-react",
+  "version": "0.0.0-semantic-release",
+  "description": "React component for User Matters",
   "publishConfig": {
     "access": "public"
   },
@@ -16,8 +16,9 @@
   },
   "types": "./dist/index.d.ts",
   "scripts": {
-    "build": "tsup src/index.ts --format cjs,esm --dts-resolve",
-    "test": "jest",
+    "dev": "vite demo",
+    "build": "tsup src/index.ts --format cjs,esm --dts --external react",
+    "test": "echo lol",
     "prepublishOnly": "npm run build"
   },
   "license": "MIT",
@@ -25,9 +26,20 @@
     "@egoist/prettier-config": "^0.1.0",
     "@sucrase/jest-plugin": "^2.0.0",
     "@types/jest": "^26.0.20",
+    "@types/react": "^17.0.9",
+    "@types/react-dom": "^17.0.6",
+    "autoprefixer": "^10.2.6",
     "jest": "^26.6.3",
+    "postcss": "^8.3.0",
     "prettier": "^2.2.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "tailwindcss": "^2.1.4",
     "tsup": "^4.8.4",
-    "typescript": "^4.2.3"
+    "typescript": "^4.2.3",
+    "vite": "^2.3.7"
+  },
+  "dependencies": {
+    "usermatters-js": "^1.0.2"
   }
 }
