@@ -1,7 +1,7 @@
 import './tailwind.css'
 import React from 'react'
 import { render } from 'react-dom'
-import { UserMatters } from '../src'
+import { FeedbackForm } from '../src'
 
 const App = () => {
   const [show, setShow] = React.useState(true)
@@ -16,18 +16,18 @@ const App = () => {
             paddingTop: '20px',
           }}
         >
-          <UserMatters project="xxx">
+          <FeedbackForm project="xxx">
             {({ handleClick }) => <button onClick={handleClick}>a</button>}
-          </UserMatters>
-          <UserMatters project="xxx">
+          </FeedbackForm>
+          <FeedbackForm project="xxx">
             {({ handleClick }) => (
               <button className="ml-64" onClick={handleClick}>
                 b
               </button>
             )}
-          </UserMatters>
+          </FeedbackForm>
           <div className=" mt-20">
-            <UserMatters project="xxx" />
+            <FeedbackForm project="xxx" />
           </div>
         </div>
       )}

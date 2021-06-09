@@ -1,7 +1,7 @@
 import { Fragment, createElement, MouseEventHandler, useEffect } from 'react'
 import { create, Options } from 'usermatters-js'
 
-export const UserMatters: React.FC<
+export const FeedbackForm: React.FC<
   {
     children?: (ctx: {
       handleClick: MouseEventHandler<HTMLButtonElement>
