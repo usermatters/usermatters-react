@@ -1,4 +1,4 @@
-import * as React from 'react'
+import React from 'react'
 import { create, Options } from 'usermatters-js'
 
 export const FeedbackForm: React.FC<
