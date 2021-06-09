@@ -40,6 +40,6 @@
     "vite": "^2.3.7"
   },
   "dependencies": {
-    "usermatters-js": "^1.0.2"
+    "usermatters-js": "^1.1.0"
   }
 }
