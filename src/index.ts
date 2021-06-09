@@ -1,21 +1,21 @@
-import { Fragment, createElement, MouseEventHandler, useEffect } from 'react'
+import * as React from 'react'
 import { create, Options } from 'usermatters-js'
 
 export const FeedbackForm: React.FC<
   {
     children?: (ctx: {
-      handleClick: MouseEventHandler<HTMLButtonElement>
+      handleClick: React.MouseEventHandler<HTMLButtonElement>
     }) => React.ReactNode
   } & Options
 > = ({ children, ...options }) => {
   const instance = create()
 
-  useEffect(() => {
+  React.useEffect(() => {
     return () => instance && instance.destroy()
   }, [])
 
   if (!children) {
-    return createElement('usermatters-app', {
+    return React.createElement('usermatters-app', {
       ...options,
       open: true,
     })
@@ -25,5 +25,9 @@ export const FeedbackForm: React.FC<
     instance.show(e.target, options)
   }
 
-  return createElement(Fragment, {}, children && children({ handleClick }))
+  return React.createElement(
+    React.Fragment,
+    {},
+    children && children({ handleClick }),
+  )
 }
