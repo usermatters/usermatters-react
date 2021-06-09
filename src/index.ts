@@ -1,7 +1,7 @@
 import React from 'react'
 import { create, Options } from 'usermatters-js'
 
-export const FeedbackForm: React.FC<
+export const FeedbackPopup: React.FC<
   {
     children?: (ctx: {
       handleClick: React.MouseEventHandler<HTMLButtonElement>
@@ -11,13 +11,19 @@ export const FeedbackForm: React.FC<
   const instance = React.useMemo(() => create(), [])
 
   React.useEffect(() => {
-    return () => instance && instance.destroy()
+    document.addEventListener('click', instance.handleDocumentClick)
+
+    return () => {
+      document.removeEventListener('click', instance.handleDocumentClick)
+      instance.destroy()
+    }
   }, [])
 
   if (!children) {
     return React.createElement('usermatters-app', {
       ...options,
       open: true,
+      inline: true,
     })
   }
 

@@ -15,9 +15,9 @@ npm i usermatters-react
 ## Usage
 
 ```tsx
-<FeedbackForm project="YOUR_PROJECT_ID">
+<FeedbackPopup project="YOUR_PROJECT_ID">
   {({ handleClick }) => <button onClick={handleClick}>Feedback</button>}
-</FeedbackForm>
+</FeedbackPopup>
 ```
 
 ## License
