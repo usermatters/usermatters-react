@@ -8,7 +8,7 @@ export const FeedbackForm: React.FC<
     }) => React.ReactNode
   } & Options
 > = ({ children, ...options }) => {
-  const instance = create()
+  const instance = React.useMemo(() => create(), [])
 
   React.useEffect(() => {
     return () => instance && instance.destroy()

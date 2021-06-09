@@ -15,11 +15,11 @@ specifiers:
   tailwindcss: ^2.1.4
   tsup: ^4.8.4
   typescript: ^4.2.3
-  usermatters-js: ^1.1.0
+  usermatters-js: ^1.1.3
   vite: ^2.3.7
 
 dependencies:
-  usermatters-js: 1.1.0
+  usermatters-js: 1.1.3
 
 devDependencies:
   '@egoist/prettier-config': 0.1.0
@@ -4342,8 +4342,8 @@ packages:
     engines: {node: '>=0.10.0'}
     dev: true
 
-  /usermatters-js/1.1.0:
-    resolution: {integrity: sha512-X+OhpeyScRQEFHpm2wc100h5TCHBa7wEZQhPncy6BmW7LsPhnxLOoUnegKLYAhSiOQY4uhhz3LMGKtO/YNxwfw==}
+  /usermatters-js/1.1.3:
+    resolution: {integrity: sha512-l3yuknvo6IMVqkggXm2V5oxK7ZsnG9h5raGCmMCS5bjNprn0NmMgyB9bZ1F9OcbmuJm3/UI+i57E+jBUCdFJpg==}
     dependencies:
       '@popperjs/core': 2.9.2
       svelte: 3.38.2

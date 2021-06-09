@@ -16,7 +16,7 @@
   },
   "types": "./dist/index.d.ts",
   "scripts": {
-    "dev": "vite demo",
+    "dev": "vite demo --port 4001",
     "build": "tsup src/index.ts --format cjs,esm --dts --external react",
     "test": "echo lol",
     "prepublishOnly": "npm run build"
@@ -40,6 +40,6 @@
     "vite": "^2.3.7"
   },
   "dependencies": {
-    "usermatters-js": "^1.1.0"
+    "usermatters-js": "^1.1.3"
   }
 }
