@@ -15,6 +15,8 @@ npm i usermatters-react
 ## Usage
 
 ```tsx
+import { FeedbackPopup } from 'usermatters-react'
+
 <FeedbackPopup project="YOUR_PROJECT_ID">
   {({ handleClick }) => <button onClick={handleClick}>Feedback</button>}
 </FeedbackPopup>
